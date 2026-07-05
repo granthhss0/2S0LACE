@@ -7,7 +7,6 @@
       "description": "A placeholder entry showing the shape games-list.json expects. Replace or delete this once you add real games.",
       "path": "games/sample-game/index.html",
       "thumbnail": "",
-      "tags": ["placeholder", "demo"],
       "controls": "Arrow keys to move, Space to jump",
       "added": "2026-07-05",
       "featured": false

@@ -33,7 +33,6 @@ A clean, glass-styled home for unblocked HTML5 games. Static site, no build step
   "description": "A short one- or two-sentence description shown on the card.",
   "path": "games/space-runner/index.html",
   "thumbnail": "games/space-runner/thumb.png",
-  "tags": ["arcade", "endless"],
   "controls": "Arrow keys to steer, Space to boost",
   "added": "2026-07-05",
   "featured": false
@@ -41,7 +40,6 @@ A clean, glass-styled home for unblocked HTML5 games. Static site, no build step
 ```
 
 - `thumbnail` is optional — leave it `""` to show an auto-generated glass placeholder tile.
-- `tags` populate the filter row on the games page automatically — no extra wiring needed.
 - `featured: true` adds a small badge to the card.
 
 That's it — no code changes needed. The games page reads `games-list.json` on load and renders everything from it.
