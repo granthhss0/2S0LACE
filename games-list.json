@@ -2,12 +2,10 @@
   "$schema": "Add a new object to the games array for each HTML5 game. Put the game's files in /games/<id>/ with an index.html entry point. thumbnail is optional — path an image inside the game's own folder, e.g. games/pixel-runner/thumb.png. If omitted, the site shows an auto-generated glass placeholder tile.",
   "games": [
     {
-      "id": "sample-game",
-      "title": "Sample Game",
-      "description": "A placeholder entry showing the shape games-list.json expects. Replace or delete this once you add real games.",
-      "path": "games/sample-game/index.html",
-      "thumbnail": "",
-      "controls": "Arrow keys to move, Space to jump",
+      "id": "retro-bowl",
+      "title": "Retro Bowl",
+      "path": "games/retro-bowl/index.html",
+      "thumbnail": "games/retro-bowl/rb.png",
       "added": "2026-07-05",
       "featured": false
     }
