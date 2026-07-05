@@ -42,27 +42,6 @@
   pointer-events: none;
 }
 
-.tag-row {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-bottom: 28px;
-}
-
-.tag-filter {
-  padding: 7px 15px;
-  border-radius: var(--r-pill);
-  background: var(--glass-1);
-  border: 1px solid var(--glass-border);
-  color: var(--ink-dim);
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  cursor: pointer;
-  transition: all var(--fast) var(--ease);
-}
-.tag-filter:hover { background: var(--glass-2); color: var(--ink); }
-.tag-filter.active { background: var(--white); color: var(--void); border-color: var(--white); }
-
 .game-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
@@ -120,9 +99,6 @@
 .game-info { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
 .game-info h3 { font-size: 0.98rem; }
 .game-info p { font-size: 0.8rem; margin: 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-
-.game-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: auto; }
-.game-tags .chip { font-size: 0.62rem; padding: 3px 9px; }
 
 .empty-state {
   grid-column: 1 / -1;

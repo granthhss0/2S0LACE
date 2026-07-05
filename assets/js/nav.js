@@ -26,6 +26,8 @@ function buildNavList(activeId, isMobile) {
   `).join('');
 }
 
+const ICON_CHEVRON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>';
+
 function renderNav(activeId) {
   const mount = document.getElementById('nav-mount');
   if (!mount) return;
@@ -35,8 +37,11 @@ function renderNav(activeId) {
 
     <nav class="sidenav" aria-label="Primary">
       <div class="sidenav-inner">
+        <button class="collapse-toggle" id="collapse-toggle" aria-label="Collapse sidebar" aria-pressed="false">
+          ${ICON_CHEVRON}
+        </button>
         <a href="index.html" class="wordmark" aria-label="2S0LACE home">
-          2S<span class="lens"></span>LACE
+          2S<span class="lens"></span><span class="full">LACE</span>
         </a>
         <div class="nav-list">${buildNavList(activeId)}</div>
         <div class="nav-footer">
@@ -56,6 +61,23 @@ function renderNav(activeId) {
       ${buildNavList(activeId)}
     </nav>
   `;
+
+  setupCollapse();
+}
+
+function setupCollapse() {
+  const toggle = document.getElementById('collapse-toggle');
+  if (!toggle) return;
+
+  const collapsed = localStorage.getItem('2s0lace-nav-collapsed') === 'true';
+  document.body.classList.toggle('nav-collapsed', collapsed);
+  toggle.setAttribute('aria-pressed', String(collapsed));
+
+  toggle.addEventListener('click', () => {
+    const isCollapsed = document.body.classList.toggle('nav-collapsed');
+    toggle.setAttribute('aria-pressed', String(isCollapsed));
+    localStorage.setItem('2s0lace-nav-collapsed', String(isCollapsed));
+  });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
